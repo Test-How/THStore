@@ -80,7 +80,10 @@ public class WebElementCommands {
 		Assert.assertTrue(isSubmitClickable);
 		
 		//verify if radio button is selected or not
+		boolean femaleSelected=driver.findElement(By.xpath("//input[@value='female']")).isSelected();
+		Assert.assertFalse(femaleSelected);
 		
+	
 	}
 
 	// you have to execute after test
