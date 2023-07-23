@@ -1,9 +1,11 @@
 package intermediate;
 
+import java.awt.RenderingHints.Key;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -36,8 +39,8 @@ public class ActionsClassMethods {
 		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.MINUTES);
 
 		// Enter URL
-		driver.get("https://www.test-how.com/");
-		
+	
+		driver.get("https://oneauto.github.io/Test/Actions.html");
 		
 	}
 	
@@ -45,26 +48,40 @@ public class ActionsClassMethods {
 	public static void actionClassMethods() {
 	
 		//click on demo apps dropdown	
-		WebElement demoAppsButton= driver.findElement(By.linkText("Demo Apps"));
-		
+		WebElement option= driver.findElement(By.className("tooltip"));
+		//mouse over
 		Actions action= new Actions(driver);
-		action.moveToElement(demoAppsButton).build().perform();
+		action.moveToElement(option).build().perform();
 		
-		WebElement option= driver.findElement(By.linkText("TH Store"));
-		action.moveToElement(option).click().build().perform();
-		
-		driver.get("https://rmodmn.csb.app/");
-		
-		WebElement card3=driver.findElement(By.id("3"));
-		//WebElement Inprogress= driver.findElement(By.xpath("//h4[text()='In Progress']/ancestor::div[@class='drag_column']"));
-		WebElement card2=driver.findElement(By.id("2"));
-		//moving card 2 to inprogress
-		action.dragAndDrop(card3, card2).build().perform();
+		WebElement tooltip= driver.findElement(By.className("tooltiptext"));
+		Assert.assertEquals(tooltip.getText(), "Tooltip text");
 		
 		
-		//moving card 2 to completed
+		//context click
+		action.contextClick(option).build().perform();
+		driver.findElement(By.tagName("h2")).click();
 		
-		System.out.println();
+		//double click
+		action.doubleClick(driver.findElement(By.tagName("h2"))).build().perform();
+				
+		
+		//multiple keys Ctrl+A
+		// Select all by simulating CTRL+A
+		action.keyDown( Keys.CONTROL ).sendKeys( "a" ).keyUp( Keys.CONTROL ).build().perform();
+		// Copy by simulating CTRL+C
+		action.keyDown( Keys.CONTROL ).sendKeys( "c" ).keyUp( Keys.CONTROL ).build().perform();
+
+	
+		
+		
+		driver.get("https://demoqa.com/droppable/");
+		WebElement from = driver.findElement(By.id("draggable"));
+		 
+		WebElement to = driver.findElement(By.id("droppable"));	
+		
+		action.dragAndDrop(from, to).perform();
+		
+	
 	}
 
 	// you have to execute after test

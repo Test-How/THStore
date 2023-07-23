@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\venka\AppData\Local\Temp\testng-eclipse--11444986\testng-customsuite.xml</span>
+                    <span>C:\Users\venka\AppData\Local\Temp\testng-eclipse--274173702\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="intermediate.Synchronization" class="method navigator-link" hash-for-method="dropdown">dropdown</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="advanced.DataDrivenTestUsingExcel" class="method navigator-link" hash-for-method="signupTest(kennedy@gmail.com, Kennedy, welcome1299)">signupTest(kennedy@gmail.com, Kennedy, welcome1299)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="advanced.DataDrivenTestUsingExcel" class="method navigator-link" hash-for-method="signupTest(alex@gmail.com, Alex, hello1234)">signupTest(alex@gmail.com, Alex, hello1234)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +126,23 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">intermediate.Synchronization</span>
+              <span class="class-name">advanced.DataDrivenTestUsingExcel</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="dropdown">
-                  </a> <!-- dropdown -->
-                  <span class="method-name">dropdown</span>
+                  <a name="signupTest(kennedy@gmail.com, Kennedy, welcome1299)">
+                  </a> <!-- signupTest(kennedy@gmail.com, Kennedy, welcome1299) -->
+                  <span class="method-name">signupTest</span>
+                  <span class="parameters">(kennedy@gmail.com,Kennedy,welcome1299)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signupTest(alex@gmail.com, Alex, hello1234)">
+                  </a> <!-- signupTest(alex@gmail.com, Alex, hello1234) -->
+                  <span class="method-name">signupTest</span>
+                  <span class="parameters">(alex@gmail.com,Alex,hello1234)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +150,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\venka\AppData\Local\Temp\testng-eclipse--11444986\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\venka\AppData\Local\Temp\testng-eclipse--274173702\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +159,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;intermediate.Synchronization&quot;&gt;
+      &lt;class name=&quot;advanced.DataDrivenTestUsingExcel&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;dropdown&quot;/&gt;
+          &lt;include name=&quot;signupTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- intermediate.Synchronization --&gt;
+      &lt;/class&gt; &lt;!-- advanced.DataDrivenTestUsingExcel --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,16 +203,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'dropdown')
-data.setCell(0, 2, 'intermediate.Synchronization')
-data.setCell(0, 3, 32373);
+data.setCell(0, 1, 'signupTest')
+data.setCell(0, 2, 'advanced.DataDrivenTestUsingExcel')
+data.setCell(0, 3, 2907);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'signupTest')
+data.setCell(1, 2, 'advanced.DataDrivenTestUsingExcel')
+data.setCell(1, 3, 2552);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -224,18 +242,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">intermediate.Synchronization</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">advanced.DataDrivenTestUsingExcel</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">precondition</span>
+                <span class="method-name">precondition(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">loadSignupPage</span>
+                <span class="method-start">14375 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">dropdown</span>
-                <span class="method-start">9379 ms</span>
+                <span class="method-name">signupTest(alex@gmail.com, Alex, hello1234)</span>
+                <span class="method-start">14933 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">loadSignupPage</span>
+                <span class="method-start">17496 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">signupTest(kennedy@gmail.com, Kennedy, welcome1299)</span>
+                <span class="method-start">19002 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">41764 ms</span>
+                <span class="method-start">21918 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

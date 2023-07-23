@@ -1,25 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-14T08:59:08 IST" name="Default suite" finished-at="2023-07-14T08:59:50 IST" duration-ms="42511">
+  <suite started-at="2023-07-20T08:55:50 IST" name="Default suite" finished-at="2023-07-20T08:56:13 IST" duration-ms="22667">
     <groups>
     </groups>
-    <test started-at="2023-07-14T08:59:08 IST" name="Default test" finished-at="2023-07-14T08:59:50 IST" duration-ms="42511">
-      <class name="intermediate.Synchronization">
-        <test-method is-config="true" signature="precondition()[pri:0, instance:intermediate.Synchronization@4be29ed9]" started-at="2023-07-14T08:59:08 IST" name="precondition" finished-at="2023-07-14T08:59:17 IST" duration-ms="9220" status="PASS">
+    <test started-at="2023-07-20T08:55:50 IST" name="Default test" finished-at="2023-07-20T08:56:13 IST" duration-ms="22667">
+      <class name="advanced.DataDrivenTestUsingExcel">
+        <test-method is-config="true" signature="precondition(java.lang.String)[pri:0, instance:advanced.DataDrivenTestUsingExcel@2a8448fa]" started-at="2023-07-20T08:55:50 IST" name="precondition" finished-at="2023-07-20T08:56:03 IST" duration-ms="12644" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method signature="dropdown()[pri:0, instance:intermediate.Synchronization@4be29ed9]" started-at="2023-07-14T08:59:17 IST" name="dropdown" finished-at="2023-07-14T08:59:49 IST" duration-ms="32373" status="PASS">
+        <test-method is-config="true" signature="loadSignupPage()[pri:0, instance:advanced.DataDrivenTestUsingExcel@2a8448fa]" started-at="2023-07-20T08:56:04 IST" name="loadSignupPage" finished-at="2023-07-20T08:56:05 IST" duration-ms="557" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dropdown -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:intermediate.Synchronization@4be29ed9]" started-at="2023-07-14T08:59:49 IST" name="endTest" finished-at="2023-07-14T08:59:50 IST" duration-ms="707" status="PASS">
+        </test-method> <!-- loadSignupPage -->
+        <test-method signature="signupTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:advanced.DataDrivenTestUsingExcel@2a8448fa]" started-at="2023-07-20T08:56:05 IST" name="signupTest" data-provider="userdata" finished-at="2023-07-20T08:56:07 IST" duration-ms="2552" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[alex@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Alex]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hello1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupTest -->
+        <test-method is-config="true" signature="loadSignupPage()[pri:0, instance:advanced.DataDrivenTestUsingExcel@2a8448fa]" started-at="2023-07-20T08:56:08 IST" name="loadSignupPage" finished-at="2023-07-20T08:56:09 IST" duration-ms="1505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadSignupPage -->
+        <test-method signature="signupTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:advanced.DataDrivenTestUsingExcel@2a8448fa]" started-at="2023-07-20T08:56:09 IST" name="signupTest" data-provider="userdata" finished-at="2023-07-20T08:56:12 IST" duration-ms="2907" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kennedy@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kennedy]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[welcome1299]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupTest -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:advanced.DataDrivenTestUsingExcel@2a8448fa]" started-at="2023-07-20T08:56:12 IST" name="endTest" finished-at="2023-07-20T08:56:13 IST" duration-ms="708" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-      </class> <!-- intermediate.Synchronization -->
+      </class> <!-- advanced.DataDrivenTestUsingExcel -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

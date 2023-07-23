@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TH Store Test Suite">
+  <test thread-count="5" name="Smoke">
+	  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="basics.NavigateCommands"/>
+      <class name="advanced.DataDrivenTestUsingExcel"/>
+      <class name="tests.SignupPageTest"/>
+      <class name="basics.DriverCommands"/>
+      <class name="intermediate.Synchronization"/>
+      <class name="advanced.TestNGAnnotations"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test  name="Regression">
+	  <classes>
+	<class name="basics.WebElementCommands"/>
+      <class name="advanced.CssSelectors"/>
+      <class name="advanced.XpathRelationShips"/>
+      <class name="advanced.TestNGDataProvider"/>
+      <class name="intermediate.Dropdown"/>
+      <class name="basics.WindowCommands"/>
+      <class name="advanced.PropertiesClass"/>
+      <class name="intermediate.SwitchToMethods"/>
+      <class name="intermediate.ActionsClassMethods"/>
+      <class name="basics.Locators"/>
+      <class name="basics.TimeOutPractice"/>
+      <class name="intermediate.WebTables"/>
+      <class name="basics.AssersionExample"/>
+	  </classes>
+	  
+  </test>
+</suite> <!-- Suite -->
